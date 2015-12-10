@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <style>
+            .webpreview {
+
+
+
+                float:right;
+
+
+                width: 80%;
+                height: 500px;
+                padding: 0px;
+                margin: 0px;
+
+                border:1px black solid;
+                -moz-transform: scale(0.6);
+                -moz-transform-origin: 0 0;
+                -o-transform: scale(0.6);
+                -o-transform-origin: 0 0;
+                -webkit-transform: scale(0.7);
+                -webkit-transform-origin: 0 0;
+            }
+
+                #title {
+
+                    width: 15%;
+                    height: 5%;
+                }
+
+                 #text {
+
+                    width: 30%;
+                    height: 17%;
+                }
+
+                #tag {
+                    float:right;
+
+
+                    padding: 5px;
+                    margin: 0px;
+                }
+      
+              
+             
+      .collapse{
+           border: #00d8ff solid;
+          width: 40%;
+          height: 30%;
+      }
+      span.glyphicon-remove {
+      font-size: 40px;
+          margin-left: 95%;
+          color: black;
+      
+}
+      #left{
+          position:absolute;
+          left: 64%;
+          top: 80%;
+      }
+      #code{
+        position:absolute;
+          left: 20%;
+          top: -1%;  
+      }
+       
+      #buttons{
+      position:absolute;
+          left: 80%;
+          top: 120%;   
+      }
+       #info{
+      position:absolute;
+          top: 120%;   
+      }
+      #private{
+      position:absolute;
+          top: 112%;   
+      }
+      
+      #buttons button {
+  font-family: Arial;
+  color: #050505;
+  font-size: 14px;
+  background: none;
+  border: none;
+  padding: 8px 34px 8px 31px;
+  text-decoration: none;
+}
+
+#buttons button:hover {
+  border: solid #3cb0fd 1px;
+  text-decoration: none;
+  color:#3cb0fd;
+}
+     #remove textarea{
+          border-top: none;
+          border-left: none;
+          border-right: none;
+      }   
+      #title{
+          position: absolute;
+          top: 80%;
+      }
+      #up{
+         position: absolute;
+          top: 86%; 
+      }
+      #note{
+         position: absolute;
+          top: 39%; 
+          left: 30%;
+      }
+body {
+  text-decoration: underline solid blue;    
+}
+
+
+            </style>
+    
+</head>
+<body>
+    <div class="container">
+        
+ <a href="showcase2.html"><span  class="glyphicon glyphicon-remove"></span></a>       
+      
+<h1>Web Links</h1>
+        
+          
+                <iframe class = "webpreview" src="http://www.nhs.uk/conditions/dentures/Pages/Introduction.aspx" width="603px" height="500px">
+                </iframe>
+
+            <h3><div class="btn-group">
+                <button type="button" id="tag" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria expanded="false">+ Add Tag</button> Tag:
+            </div></h3>
+      
+
+     <div id= "left">      
+<div id="code">
+    <p onclick="underline()" id="line">EMBEDED CODE</p>
+    </div>
+     <p onclick="underline2()" id="line2">LIBRARY</p>
+         
+  <span class="glyphicon glyphicon-link"></span> 
+        
+        <textarea rows="4" cols="50" type="text" placeholder="Pace embeded coded code here.."></textarea>
+ 
+        <br><button type="button"> Update</button>
+         
+
+   </div>
+        <div id="buttons">
+            <a href="showcase2.html"><button type="button"> Cancel</button><button type="button"> Save</button></a>
+            </div>
+        <div id= "info">
+        <img src="img/info.png" width="10%" >
+            </div>
+        <div id="private">
+        PRIVATE  <img src="img/lock.png" width="9%">
+            </div>
+        <div id="remove">
+            <div id="title">
+        <p>TITLE</p>
+                </div>
+            <div id= "up">
+        <textarea rows="2" cols="50" type="text" placeholder="How to floss"></textarea>
+    <p onclick="underline1()" id="line1">DESCRIPTION</p>
+                <div id = "note">
+     <p onclick="underline21()" id="line21">NOTES</p>  
+                    </div>
+        <textarea rows="2" cols="50" type="text" placeholder="Write a short description about the video.."></textarea>
+                </div>
+            </div>
+    </div>
+    
+    <script>
+        var line = false;
+        var line2 = false;
+    function underline(){
+        console.log("Line 2");
+        if (line2 === true){
+            document.getElementById("line2").style.textDecoration = "none";
+            line2 = false;
+            document.getElementById("line").style.textDecoration = "underline";
+            line = true; 
+        }else{
+           document.getElementById("line").style.textDecoration = "underline";
+            line = true;  
+        }
+    };
+   function underline2(){
+       console.log("Line 2");
+       if (line === true){
+            document.getElementById("line").style.textDecoration = "none";
+            line = false;
+            document.getElementById("line2").style.textDecoration = "underline";
+            line2 = true; 
+        }else{
+           document.getElementById("line2").style.textDecoration = "underline";
+            line2 = true;  
+        }
+     };
+   
+        var line1 = false;
+        var line21 = false;
+    function underline1(){
+        console.log("Line 21");
+        if (line21 === true){
+            document.getElementById("line21").style.textDecoration = "none";
+            line21 = false;
+            document.getElementById("line1").style.textDecoration = "underline";
+            line1 = true; 
+        }else{
+           document.getElementById("line1").style.textDecoration = "underline";
+            line1 = true;  
+        }
+    };
+   function underline21(){
+       console.log("Line 21");
+       if (line1 === true){
+            document.getElementById("line1").style.textDecoration = "none";
+            line1 = false;
+            document.getElementById("line21").style.textDecoration = "underline";
+            line21 = true; 
+        }else{
+           document.getElementById("line21").style.textDecoration = "underline";
+            line21 = true;  
+        }
+     };
+   
+    </script>
+
+</body>
+</html>
